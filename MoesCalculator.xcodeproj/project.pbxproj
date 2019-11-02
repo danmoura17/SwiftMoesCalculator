@@ -19,6 +19,8 @@
 		8DE140EE2076A663007F798B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140E92076A663007F798B /* LoginTableViewController.swift */; };
 		8DE140F22076A7D1007F798B /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140F12076A7D1007F798B /* UIColor+Additions.m */; };
 		A98DC5A7236DDFC1000D5D34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A98DC5A6236DDFC1000D5D34 /* GoogleService-Info.plist */; };
+		A98DC5AA236DFB04000D5D34 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC5A9236DFB04000D5D34 /* OrderList.swift */; };
+		A98DC5AC236DFB81000D5D34 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC5AB236DFB81000D5D34 /* BarItem.swift */; };
 		D8DCE3E5791E6297898F0084 /* Pods_MoesCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C345EF85E68E034903C7476C /* Pods_MoesCalculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		8DE140F02076A7D1007F798B /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		8DE140F12076A7D1007F798B /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 		A98DC5A6236DDFC1000D5D34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A98DC5A9236DFB04000D5D34 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		A98DC5AB236DFB81000D5D34 /* BarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
 		B93218BB356EE406AC71533B /* Pods-MoesCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoesCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoesCalculator/Pods-MoesCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		C345EF85E68E034903C7476C /* Pods_MoesCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoesCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 		8D56596B2076A2AF00B2268E /* MoesCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A98DC5A8236DFAAC000D5D34 /* Models */,
 				A98DC5A6236DDFC1000D5D34 /* GoogleService-Info.plist */,
 				8DE140E42076A650007F798B /* Controllers */,
 				8D56596C2076A2AF00B2268E /* AppDelegate.swift */,
@@ -119,6 +124,15 @@
 				8DE140E62076A663007F798B /* ShoppingListTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A98DC5A8236DFAAC000D5D34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A98DC5A9236DFB04000D5D34 /* OrderList.swift */,
+				A98DC5AB236DFB81000D5D34 /* BarItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,8 @@
 			files = (
 				8DE140ED2076A663007F798B /* GroceryItemsTableViewController.swift in Sources */,
 				8D56596F2076A2AF00B2268E /* ViewController.swift in Sources */,
+				A98DC5AC236DFB81000D5D34 /* BarItem.swift in Sources */,
+				A98DC5AA236DFB04000D5D34 /* OrderList.swift in Sources */,
 				8DE140EA2076A663007F798B /* AddShoppingListTableViewController.swift in Sources */,
 				8D56596D2076A2AF00B2268E /* AppDelegate.swift in Sources */,
 				8DE140EC2076A663007F798B /* AddGroceryItemTableViewController.swift in Sources */,
