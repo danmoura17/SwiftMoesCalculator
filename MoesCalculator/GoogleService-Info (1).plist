@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>728101562062-2obfchh90s0b0ejs0fhk9ercvs6qibfs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.728101562062-2obfchh90s0b0ejs0fhk9ercvs6qibfs</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>728101562062-r7cb4iign2h48449nvphh1j8kkq7gj7c.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyARZIz5n6vPvzxncEjE8T6T6p5GAukQijw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>728101562062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Moes-Calculator-Final</string>
+	<key>PROJECT_ID</key>
+	<string>moescalculator</string>
+	<key>STORAGE_BUCKET</key>
+	<string>moescalculator.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:728101562062:ios:bf810c688f1497ff53d29f</string>
+	<key>DATABASE_URL</key>
+	<string>https://moescalculator.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+framework module Pods_MoesCalculator {
+  umbrella header "Pods-MoesCalculator-umbrella.h"
+
+  export *
+  module * { export * }
+}
