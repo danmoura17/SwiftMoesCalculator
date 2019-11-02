@@ -55,6 +55,14 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
             let addShoppingListVC = nc.viewControllers.first as! AddShoppingListTableViewController
             addShoppingListVC.delegate = self
             
+        } else if segue.identifier == "GroceryItemsTableViewController"{
+            guard let indexPath = self.tableView.indexPathForSelectedRow else{
+                return
+            }
+            
+            let barItemsTVC = segue.destination as! GroceryItemsTableViewController
+            barItemsTVC.orderList = self.orderLists[indexPath.row]
+            
         }
         
     }
