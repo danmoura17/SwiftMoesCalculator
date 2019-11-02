@@ -7,5 +7,6 @@ target 'MoesCalculator' do
 
   # Pods for MoesCalculator
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end

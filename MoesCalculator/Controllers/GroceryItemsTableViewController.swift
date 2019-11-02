@@ -13,6 +13,16 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
         controller.dismiss(animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            self.orderList.barItems.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+        
+        
+    }
+    
     func addGroceryItemTableViewControllerDidSave(controller: UIViewController, barItem: BarItem) {
         self.orderList.barItems.append(barItem)
         controller.dismiss(animated: true, completion: nil)

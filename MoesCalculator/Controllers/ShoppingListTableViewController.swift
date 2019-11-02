@@ -7,14 +7,18 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ShoppingListTableViewController : UITableViewController, AddShoppingListTableViewControllerDelegate {
     
     private var orderLists = [OrderList]()
+    private var rootRef :DatabaseReference!
    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.rootRef = Database.database().reference()
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -28,6 +32,9 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         
         let orderList = OrderList(title: title)
         self.orderLists.append(orderList)
+        
+        let orderListRef = self.rootRef.child(orderList.title)
+        orderListRef.setValue([orderList.toDictionary()])
         
         controller.dismiss(animated: true, completion: nil)
         

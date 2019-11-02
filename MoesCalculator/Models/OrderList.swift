@@ -17,4 +17,8 @@ class OrderList{
         self.title = title
     }
     
+    func toDictionary() -> [String:Any]{
+        return ["costumerName":self.title]
+    }
+    
 }
