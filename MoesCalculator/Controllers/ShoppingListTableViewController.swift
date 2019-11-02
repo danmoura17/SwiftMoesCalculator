@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class ShoppingListTableViewController : UITableViewController, AddShoppingListTableViewControllerDelegate {
+    
+    private var orderLists = [OrderList]()
    
     override func viewDidLoad() {
         
@@ -24,7 +26,26 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
     
     func addShoppingListTableViewControllerDidSave(controller: UIViewController, title: String) {
         
-        print(title)
+        let orderList = OrderList(title: title)
+        self.orderLists.append(orderList)
+        
+        controller.dismiss(animated: true, completion: nil)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.orderLists.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderListTableViewCell", for: indexPath)
+        let orderList = self.orderLists[indexPath.row]
+        cell.textLabel?.text = orderList.title
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
