@@ -34,7 +34,9 @@ class OrderList{
     }
     
     func toDictionary() -> [String:Any]{
-        return ["costumerName":self.title]
+        return ["costumerName":self.title, "barItems": self.barItems.map{ barItem in
+                return barItem.toDictionary()
+            }]
     }
     
 }
