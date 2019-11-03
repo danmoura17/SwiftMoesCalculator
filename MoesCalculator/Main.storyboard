@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1756" y="223.53823088455775"/>
         </scene>
-        <!--Add New Grocery Item-->
+        <!--Adicionar item-->
         <scene sceneID="Gx3-fY-kXs">
             <objects>
                 <tableViewController id="SSS-fo-Rxy" customClass="AddGroceryItemTableViewController" customModule="MoesCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxV-oA-dLO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxV-oA-dLO">
                                                     <rect key="frame" x="16" y="12" width="86" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="86" id="PC2-ZD-ius"/>
@@ -163,7 +163,7 @@
                             <outlet property="delegate" destination="SSS-fo-Rxy" id="YzL-8x-ODG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add New Grocery Item" id="fGf-QF-KMh">
+                    <navigationItem key="navigationItem" title="Adicionar item" id="fGf-QF-KMh">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="GqX-jC-1RQ">
                             <connections>
                                 <action selector="cancel" destination="SSS-fo-Rxy" id="u2Q-GW-Ji6"/>
@@ -183,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="3383.1999999999998" y="223.53823088455775"/>
         </scene>
-        <!--Add Shopping List-->
+        <!--Nome do Cliente-->
         <scene sceneID="nto-j4-tYw">
             <objects>
                 <tableViewController id="HKm-Ax-Dkf" customClass="AddShoppingListTableViewController" customModule="MoesCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +209,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Shopping List Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XA-eX-Uhr">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XA-eX-Uhr">
                                                     <rect key="frame" x="16" y="13.5" width="343" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -239,7 +239,7 @@
                             <outlet property="delegate" destination="HKm-Ax-Dkf" id="LYX-fI-nBu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Shopping List" id="h5T-En-vaj">
+                    <navigationItem key="navigationItem" title="Nome do Cliente" id="h5T-En-vaj">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="aCb-wI-gBo">
                             <connections>
                                 <action selector="cancel" destination="HKm-Ax-Dkf" id="rQO-N6-BdF"/>

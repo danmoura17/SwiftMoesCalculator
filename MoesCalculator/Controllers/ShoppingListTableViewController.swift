@@ -23,6 +23,16 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         populateOrderList()
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete){
+            
+            let orderList = self.orderLists[indexPath.row]
+            let orderListRef = self.rootRef.child(orderList.title)
+            orderListRef.removeValue()
+            
+        }
+    }
+    
     private func populateOrderList(){
         self.rootRef.observe(.value){ snapshot in
             
