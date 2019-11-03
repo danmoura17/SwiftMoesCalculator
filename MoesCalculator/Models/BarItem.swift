@@ -16,6 +16,15 @@ class BarItem{
         self.title = title
     }
     
+    init?(dictionary :JSONDictionary){
+        
+        guard let title = dictionary["costumerName"] as? String else{
+            return nil
+        }
+        
+        self.title = title
+    }
+    
     func toDictionary() -> [String:Any]{
         return ["costumerName":self.title]
     }

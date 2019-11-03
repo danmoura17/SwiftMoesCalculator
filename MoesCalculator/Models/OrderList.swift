@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias JSONDictionary = [String:Any]
+
 class OrderList{
     
     var title :String!
@@ -15,6 +17,20 @@ class OrderList{
     
     init(title: String){
         self.title = title
+    }
+    
+    init?(_ dictionary :[String:Any]){
+        
+        guard let title = dictionary["costumerName"] as? String else{
+            return nil
+        }
+        
+        self.title = title
+        let barItemsDictionary = dictionary["barItems"] as? [JSONDictionary]
+        
+        if let dictionaries = barItemsDictionary{
+            self.barItems = dictionaries.compactMap(BarItem.init)
+        }
     }
     
     func toDictionary() -> [String:Any]{

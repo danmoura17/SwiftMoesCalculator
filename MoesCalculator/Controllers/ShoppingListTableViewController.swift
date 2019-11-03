@@ -20,6 +20,28 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         
         self.rootRef = Database.database().reference()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        populateOrderList()
+    }
+    
+    private func populateOrderList(){
+        self.rootRef.observe(.value){ snapshot in
+            
+            self.orderLists.removeAll()
+            
+            let orderListDictionary = snapshot.value as? [String:Any] ?? [:]
+
+            for (key, _) in orderListDictionary{
+                
+                if let orderListDictionary = orderListDictionary[key] as? [String:Any]{
+                    if let orderList = OrderList(orderListDictionary){
+                        self.orderLists.append(orderList)
+                    }
+                }
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func addShoppingListTableViewControllerDidCancel(controller: UIViewController) {
@@ -34,7 +56,7 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         self.orderLists.append(orderList)
         
         let orderListRef = self.rootRef.child(orderList.title)
-        orderListRef.setValue([orderList.toDictionary()])
+        orderListRef.setValue(orderList.toDictionary())
         
         controller.dismiss(animated: true, completion: nil)
         
