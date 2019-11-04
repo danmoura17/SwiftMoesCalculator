@@ -19,7 +19,7 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         super.viewDidLoad()
         
         self.rootRef = Database.database().reference()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
         populateOrderList()
     }
     
