@@ -1,5 +1,5 @@
 //
-//  GroceryItemsTableViewController.swift
+//  BarItemsTableViewController.swift
 //  MoesCalculator
 //
 
@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTableViewControllerDelegate {
+class BarItemsTableViewController : UITableViewController, AddBarItemTableViewControllerDelegate {
     
     var orderList :OrderList!
     private var rootRef :DatabaseReference!
@@ -23,7 +23,7 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
         self.rootRef = Database.database().reference()
     }
     
-    func addGroceryItemTableViewControllerDidCancel(controller: UIViewController) {
+    func AddBarItemTableViewControllerDidCancel(controller: UIViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
     
@@ -37,7 +37,7 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
         
     }
     
-    func addGroceryItemTableViewControllerDidSave(controller: UIViewController, barItem: BarItem) {
+    func AddBarItemTableViewControllerDidSave(controller: UIViewController, barItem: BarItem) {
         
         var totalValue = 0.00
         let orderListRef = self.rootRef.child(self.orderList.title)
@@ -83,7 +83,7 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
             return
         }
         
-        guard let addBarTVC = nc.viewControllers.first as? AddGroceryItemTableViewController else{
+        guard let addBarTVC = nc.viewControllers.first as? AddBarItemTableViewController else{
             return
         }
         

@@ -1,5 +1,5 @@
 //
-//  ShoppingListTableViewController.swift
+//  OrderListTableViewController.swift
 //  MoesCalculator
 //
 
@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class ShoppingListTableViewController : UITableViewController, AddShoppingListTableViewControllerDelegate {
+class OrderListTableViewController : UITableViewController, AddOrderListTableViewControllerDelegate {
     
     private var orderLists = [OrderList]()
     private var rootRef :DatabaseReference!
@@ -54,13 +54,13 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
         }
     }
     
-    func addShoppingListTableViewControllerDidCancel(controller: UIViewController) {
+    func AddOrderListTableViewControllerDidCancel(controller: UIViewController) {
         
         controller.dismiss(animated: true, completion: nil)
         
     }
     
-    func addShoppingListTableViewControllerDidSave(controller: UIViewController, title: String) {
+    func AddOrderListTableViewControllerDidSave(controller: UIViewController, title: String) {
         
         let orderList = OrderList(title: title)
         self.orderLists.append(orderList)
@@ -88,18 +88,18 @@ class ShoppingListTableViewController : UITableViewController, AddShoppingListTa
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddShoppingListTableViewController" {
+        if segue.identifier == "AddOrderListTableViewController" {
             
             let nc = segue.destination as! UINavigationController
-            let addShoppingListVC = nc.viewControllers.first as! AddShoppingListTableViewController
+            let addShoppingListVC = nc.viewControllers.first as! AddOrderListTableViewController
             addShoppingListVC.delegate = self
             
-        } else if segue.identifier == "GroceryItemsTableViewController"{
+        } else if segue.identifier == "BarItemsTableViewController"{
             guard let indexPath = self.tableView.indexPathForSelectedRow else{
                 return
             }
             
-            let barItemsTVC = segue.destination as! GroceryItemsTableViewController
+            let barItemsTVC = segue.destination as! BarItemsTableViewController
             barItemsTVC.orderList = self.orderLists[indexPath.row]
             
         }
