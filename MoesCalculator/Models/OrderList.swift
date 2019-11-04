@@ -14,6 +14,7 @@ class OrderList{
     
     var title :String!
     var barItems :[BarItem] = [BarItem]()
+    var totalValue :Double!
     
     init(title: String){
         self.title = title
@@ -26,6 +27,7 @@ class OrderList{
         }
         
         self.title = title
+        
         let barItemsDictionary = dictionary["barItems"] as? [JSONDictionary]
         
         if let dictionaries = barItemsDictionary{
@@ -34,9 +36,9 @@ class OrderList{
     }
     
     func toDictionary() -> [String:Any]{
-        return ["costumerName":self.title, "barItems": self.barItems.map{ barItem in
+        return ["costumerName":self.title,"barItems": self.barItems.map{ barItem in
                 return barItem.toDictionary()
-            }]
+            }, "totalValue":self.totalValue]
     }
     
 }

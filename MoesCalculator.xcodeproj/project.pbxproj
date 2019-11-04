@@ -16,7 +16,6 @@
 		8DE140EB2076A663007F798B /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140E62076A663007F798B /* ShoppingListTableViewController.swift */; };
 		8DE140EC2076A663007F798B /* AddGroceryItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140E72076A663007F798B /* AddGroceryItemTableViewController.swift */; };
 		8DE140ED2076A663007F798B /* GroceryItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140E82076A663007F798B /* GroceryItemsTableViewController.swift */; };
-		8DE140EE2076A663007F798B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140E92076A663007F798B /* LoginTableViewController.swift */; };
 		8DE140F22076A7D1007F798B /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE140F12076A7D1007F798B /* UIColor+Additions.m */; };
 		A98DC5A7236DDFC1000D5D34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A98DC5A6236DDFC1000D5D34 /* GoogleService-Info.plist */; };
 		A98DC5AA236DFB04000D5D34 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DC5A9236DFB04000D5D34 /* OrderList.swift */; };
@@ -37,7 +36,6 @@
 		8DE140E62076A663007F798B /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		8DE140E72076A663007F798B /* AddGroceryItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryItemTableViewController.swift; sourceTree = "<group>"; };
 		8DE140E82076A663007F798B /* GroceryItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemsTableViewController.swift; sourceTree = "<group>"; };
-		8DE140E92076A663007F798B /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8DE140EF2076A7D0007F798B /* MoesCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoesCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DE140F02076A7D1007F798B /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		8DE140F12076A7D1007F798B /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				8DE140E72076A663007F798B /* AddGroceryItemTableViewController.swift */,
 				8DE140E52076A663007F798B /* AddShoppingListTableViewController.swift */,
 				8DE140E82076A663007F798B /* GroceryItemsTableViewController.swift */,
-				8DE140E92076A663007F798B /* LoginTableViewController.swift */,
 				8DE140E62076A663007F798B /* ShoppingListTableViewController.swift */,
 			);
 			path = Controllers;
@@ -257,7 +254,6 @@
 				8DE140EC2076A663007F798B /* AddGroceryItemTableViewController.swift in Sources */,
 				8DE140F22076A7D1007F798B /* UIColor+Additions.m in Sources */,
 				8DE140EB2076A663007F798B /* ShoppingListTableViewController.swift in Sources */,
-				8DE140EE2076A663007F798B /* LoginTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,7 @@ class AddShoppingListTableViewController : UITableViewController {
     }
     
     @IBAction func cancel() {
-        
+        self.delegate.addShoppingListTableViewControllerDidCancel(controller: self)
         
     }
     

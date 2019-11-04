@@ -39,9 +39,23 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
     
     func addGroceryItemTableViewControllerDidSave(controller: UIViewController, barItem: BarItem) {
         
+        var totalValue = 0.00
         let orderListRef = self.rootRef.child(self.orderList.title)
         
         self.orderList.barItems.append(barItem)
+        
+        switch barItem.title {
+        case "Cerveja":
+            totalValue += 8.32
+        case "Agua":
+            totalValue += 3.90
+        case "Hamburguer":
+            totalValue += 12.50
+        default:
+            totalValue += 0.01
+        }
+        
+        self.orderList.totalValue = totalValue
         
         orderListRef.setValue(self.orderList.toDictionary())
         
@@ -63,12 +77,8 @@ class GroceryItemsTableViewController : UITableViewController, AddGroceryItemTab
         return cell
     }
     
-    
-    
-    
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let nc = segue.destination as? UINavigationController else{
             return
         }

@@ -18,7 +18,7 @@ class BarItem{
     
     init?(dictionary :JSONDictionary){
         
-        guard let title = dictionary["costumerName"] as? String else{
+        guard let title = dictionary["itemName"] as? String else{
             return nil
         }
         
@@ -26,7 +26,7 @@ class BarItem{
     }
     
     func toDictionary() -> [String:Any]{
-        return ["costumerName":self.title]
+        return ["itemName":self.title]
     }
     
 }
